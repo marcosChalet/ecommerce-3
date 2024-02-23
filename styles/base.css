@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --card-text-size: 1.4em;
+  --default-font-family: "Montserrat", sans-serif;
+  --light-gray: #fafafa;
+  --light-gray-2: #ececec;
+  --light-background-color: #ffffff;
+  --primary-color: #23a6f0;
+  --text-color: #252b42;
+  --second-text-color: #737373;
+  --light-text-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--default-font-family);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: var(--card-text-size); /* 14px */
+  color: var(--text-color);
+  background-color: var(--light-gray);
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 5.8rem;
+  line-height: 8rem;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 5.7rem;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+h6 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+
+h3,
+h5 {
+  letter-spacing: 0.01rem;
+}
+
+h1,
+h2,
+h4,
+h6 {
+  letter-spacing: 0.02rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  letter-spacing: 0.02rem;
+}
+
+li {
+  list-style: none;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: 0.02rem;
+}
+
+.s-page-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 32rem;
+}
+
+.u-btn-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  letter-spacing: 0.02rem;
+}
+
+.u-mobile-meu {
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.02rem;
+}
+
+.u-container-size {
+  width: 108.4rem;
+  margin: auto;
+}

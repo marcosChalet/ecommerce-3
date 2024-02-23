@@ -4,35 +4,130 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecommerce - 3</title>
-    <link rel="stylesheet" href="page.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
   </head>
-  <body class="page-container">
-    <header>
-      <div>
-        <p>Bandage</p>
+  <body class="s-page-container">
+    <header class="c-header">
+      <div class="s-header__container">
+        <h3 class="c-header__logotipo">Bandage</h3>
+        <nav class="c-header__nav">
+          <ul class="c-header__nav-list">
+            <li class="c-header__nav-item">
+              <a class="c-header__nav-link" href="#home">Home</a>
+            </li>
+            <li class="c-header__nav-item">
+              <select name="shop" id="shop" class="c-header__nav-select">
+                <option disabled selected value>Shop</option>
+                <option value="shop2">Shop 1</option>
+                <option value="shop3">Shop 2</option>
+                <option value="shop4">Shop 3</option>
+              </select>
+            </li>
+            <li class="c-header__nav-item">
+              <a class="c-header__nav-link" href="#about">About</a>
+            </li>
+            <li class="c-header__nav-item">
+              <a class="c-header__nav-link" href="#blog">Blog</a>
+            </li>
+            <li class="c-header__nav-item">
+              <a class="c-header__nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="c-header__nav-item">
+              <a class="c-header__nav-link" href="#pages">Pages</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="c-header__actions">
+          <a
+            id="login"
+            class="c-header__action-link c-header__link-login c-header__link-login--js"
+          >
+            <img
+              src="./assets/images/human-icon.svg"
+              alt="Ícone de uma pessoa"
+            />
+            <p>Login / Register</p>
+          </a>
+          <a id="search" class="c-header__action-link">
+            <img src="assets/images/search-icon.svg" alt="Ícone de uma lupa" />
+          </a>
+          <a
+            id="cart"
+            class="c-header__action-link c-header__link-count c-header__link-cart--js"
+          >
+            <img
+              src="./assets/images/cart-icon.svg"
+              alt="Ícone de um carrinho de compras"
+            />
+          </a>
+          <a
+            id="favorites"
+            class="c-header__action-link c-header__link-count c-header__favorite--js"
+          >
+            <img
+              src="./assets/images/heart-icon.svg"
+              alt="Ícoen de um coração"
+            />
+          </a>
+        </div>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Pages</a></li>
-        </ul>
-      </nav>
-      <div>
-        <a href="#">Login / Register</a>
-        <a href="#">Search</a>
-        <a href="#">Cart</a>
-        <a href="#">Heart</a>
+
+      <!-- Carousel -->
+      <div class="s-swiper-box">
+        <div class="swiper c-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="c-swiper__message">
+                <h1 class="c-message__title">GROCERIES DELIVERY</h1>
+                <h4 class="c-message__subtitle">
+                  We know how large objects will act, but things on a small
+                  scale just do not act that way.
+                </h4>
+                <button class="c-swiper__button-cta u-btn-text">
+                  Start Now
+                </button>
+              </div>
+              <img
+                src="assets/images/product-slide-1.jpg"
+                alt="Image de fundo vermelho com uma porção de nugets, outra de batata frita e dois molhos"
+              />
+            </div>
+            <div class="swiper-slide">
+              <div class="c-swiper__message">
+                <h1 class="c-message__title">GROCERIES DELIVERY</h1>
+                <h4 class="c-message__subtitle">
+                  We know how large objects will act, but things on a small
+                  scale just do not act that way.
+                </h4>
+                <button class="c-swiper__button-cta">Start Now</button>
+              </div>
+              <img
+                src="assets/images/product-slide-1.jpg"
+                alt="Image de fundo vermelho com uma porção de nugets, outra de batata frita e dois molhos"
+              />
+            </div>
+          </div>
+          <!-- Pagination -->
+          <div class="swiper-pagination c-swiper-pagination"></div>
+
+          <!-- Navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </div>
     </header>
-    <main>
-      <section><p>Main</p></section>
-    </main>
+    <main></main>
     <footer>
       <p>Footer</p>
     </footer>
   </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./src/page.js"></script>
 </html>
