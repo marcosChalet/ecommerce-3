@@ -20,6 +20,7 @@
 .c-header__logotipo {
   color: var(--text-color);
   cursor: default;
+  user-select: none;
 }
 
 /*
@@ -180,6 +181,8 @@
   height: 100%;
   color: var(--light-text-color);
   text-align: center;
+  cursor: default;
+  user-select: none;
 }
 
 .c-message__subtitle {
