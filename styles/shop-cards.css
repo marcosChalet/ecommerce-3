@@ -1,0 +1,52 @@
+.c-card-item__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 39.2rem;
+}
+
+.c-card-item {
+  position: relative;
+  width: 33.2rem;
+  height: 23.1rem;
+  border: 1px solid var(--light-gray-2);
+  overflow: hidden;
+  background-color: white;
+}
+
+.c-card-item__description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding-left: 2.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.c-description__text {
+  line-height: 2rem;
+  color: var(--second-text-color);
+}
+
+.c-description__title {
+  width: 9.4rem;
+  margin: 1.7rem 0;
+}
+
+.c-description__subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.c-description__title,
+.c-description__subtitle {
+  color: var(--text-color);
+}
+
+.c-card-item__image {
+  mix-blend-mode: multiply;
+}
