@@ -195,8 +195,10 @@
   border: none;
   border-radius: 0.5rem;
   color: var(--light-text-color);
+  transition-duration: 500ms;
 }
 
 .c-swiper__button-cta:hover {
   cursor: pointer;
+  background-color: black;
 }
