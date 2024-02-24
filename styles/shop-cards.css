@@ -1,3 +1,7 @@
+.s-shop-dards {
+  background-color: var(--light-gray);
+}
+
 .c-card-item__list {
   display: flex;
   justify-content: space-between;
