@@ -103,5 +103,5 @@ li {
 
 .s-page-container {
   display: grid;
-  grid-template-rows: 1fr 1fr 32rem;
+  grid-template-rows: min-content 1fr 32rem;
 }
