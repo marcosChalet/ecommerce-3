@@ -1,0 +1,22 @@
+.u-btn-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  letter-spacing: 0.02rem;
+}
+
+.u-mobile-meu {
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.02rem;
+}
+
+.u-container-size {
+  width: 108.4rem;
+  margin: auto;
+}
+
+.u-uppercase {
+  text-transform: uppercase;
+}
