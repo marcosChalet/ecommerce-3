@@ -10,6 +10,8 @@
   --text-color: #252b42;
   --second-text-color: #737373;
   --light-text-color: #ffffff;
+  --muted-color: #bdbdbd;
+  --secondary-color-1: #23856d;
 }
 
 * {
@@ -30,7 +32,7 @@ html {
 body {
   font-size: var(--card-text-size); /* 14px */
   color: var(--text-color);
-  background-color: var(--light-gray);
+  background-color: var(--light-background-color);
 }
 
 li {
