@@ -1,0 +1,81 @@
+.c-trigger {
+  display: grid;
+  grid-template-columns: 67.4rem 1fr;
+  grid-template-rows: 64.9fr 11.1rem;
+  align-items: center;
+  justify-items: center;
+  row-gap: 2.5rem;
+}
+
+/* Card lateral */
+.c-trigget__side-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 52.6rem;
+  max-width: 34.8rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.c-trigget__side-card__title {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+.c-trigget__side-card__paragraph {
+  letter-spacing: 0.02rem;
+  font-weight: 400;
+  max-width: 28rem;
+  color: var(--second-text-color);
+}
+
+/* Lista de pontos positivos */
+.c-triggers__list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-column-start: -3;
+  grid-column-end: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.c-triggers__item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-triggers__description {
+  display: grid;
+  grid-template-columns: 2.8rem 1fr;
+  grid-template-rows: 2.4rem 1fr;
+  width: 20.1rem;
+  height: 6.1rem;
+  row-gap: 0.8rem;
+  column-gap: 1.2rem;
+}
+.c-triggers__item__number {
+  color: var(--danger-text-color);
+  line-height: 5rem;
+  height: fit-content;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.c-triggers__item__title {
+  font-weight: 700;
+}
+
+.c-triggers__item__text {
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
