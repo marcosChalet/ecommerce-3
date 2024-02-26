@@ -7,6 +7,21 @@
   row-gap: 2.5rem;
 }
 
+/****************************
+* Invertendo ordem da seção *
+****************************/
+
+.c-trigger--reverse {
+  grid-template-columns: 1fr 67.4rem;
+  grid-template-rows: 1fr;
+}
+
+.c-trigger--reverse > img {
+  order: 1;
+}
+
+/***************************/
+
 /* Card lateral */
 .c-trigget__side-card {
   display: flex;
@@ -27,7 +42,7 @@
 
 .c-trigget__side-card__paragraph {
   letter-spacing: 0.02rem;
-  font-weight: 400;
+  font-weight: 600;
   max-width: 28rem;
   color: var(--second-text-color);
 }
@@ -78,4 +93,16 @@
   line-height: 1.6rem;
   grid-column-start: 2;
   grid-column-end: 3;
+}
+
+/* Lista de cores do produto */
+
+.c-side-card__colors-item {
+  display: inline-block;
+}
+
+.c-side-card__color {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 100%;
 }
