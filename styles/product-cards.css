@@ -6,6 +6,18 @@
   padding: 5rem 0 0 0;
 }
 
+/****************************
+* Invertendo ordem da seção *
+****************************/
+.c-product-cards--reverse {
+  grid-template-columns: 1fr 38.9rem;
+}
+
+.c-product-cards__side-card--reverse {
+  order: 1;
+}
+/***************************/
+
 .c-product-cards__side-card {
   position: relative;
   padding: 2.5rem 0 0 4rem;
