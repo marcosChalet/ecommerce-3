@@ -1,0 +1,46 @@
+.u-btn-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  letter-spacing: 0.02rem;
+}
+
+.u-mobile-meu {
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.02rem;
+}
+
+.u-container-size {
+  width: 108.4rem;
+  margin: auto;
+}
+
+.u-uppercase {
+  text-transform: uppercase;
+}
+
+.u-capitalize {
+  text-transform: capitalize;
+}
+
+.u-background-blue {
+  background-color: #23a6f0;
+}
+
+.u-background-green {
+  background-color: #23856d;
+}
+
+.u-background-orange {
+  background-color: #e77c40;
+}
+
+.u-background-dark-sea {
+  background-color: #252b42;
+}
+
+.u-enabled {
+  color: var(--enabled-element) !important;
+}

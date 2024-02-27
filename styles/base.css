@@ -7,9 +7,16 @@
   --light-gray-2: #ececec;
   --light-background-color: #ffffff;
   --primary-color: #23a6f0;
+  --primary-text-color: #23a6f0;
   --text-color: #252b42;
   --second-text-color: #737373;
   --light-text-color: #ffffff;
+  --muted-color: #bdbdbd;
+  --secondary-color-1: #23856d;
+  --danger-text-color: #e74040;
+  --danger-color: #e74040;
+  --enabled-element: #8ec2f2;
+  --dark-background-color: #252b42;
 }
 
 * {
@@ -30,7 +37,7 @@ html {
 body {
   font-size: var(--card-text-size); /* 14px */
   color: var(--text-color);
-  background-color: var(--light-gray);
+  background-color: var(--light-background-color);
 }
 
 li {
@@ -103,24 +110,5 @@ li {
 
 .s-page-container {
   display: grid;
-  grid-template-rows: 1fr 1fr 32rem;
-}
-
-.u-btn-text {
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 2.8rem;
-  letter-spacing: 0.02rem;
-}
-
-.u-mobile-meu {
-  font-weight: 400;
-  font-size: 3rem;
-  line-height: 4.5rem;
-  letter-spacing: 0.02rem;
-}
-
-.u-container-size {
-  width: 108.4rem;
-  margin: auto;
+  grid-template-rows: min-content 1fr 32rem;
 }

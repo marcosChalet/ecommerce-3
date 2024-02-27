@@ -1,3 +1,7 @@
+.s-shop-cards {
+  background-color: var(--light-gray);
+}
+
 .c-card-item__list {
   display: flex;
   justify-content: space-between;
@@ -12,6 +16,7 @@
   border: 1px solid var(--light-gray-2);
   overflow: hidden;
   background-color: white;
+  cursor: pointer;
 }
 
 .c-card-item__description {
