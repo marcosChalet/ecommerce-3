@@ -1,7 +1,7 @@
 .s-footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 14.2rem 27.2rem 7.4rem;
+  grid-template-rows: 14.2rem auto 7.4rem;
   padding: 4rem 0 0 0;
 }
 
@@ -11,6 +11,7 @@
   background-color: var(--dark-background-color);
   color: var(--light-text-color);
   height: fit-content;
+  margin-top: 10rem;
 }
 
 .c-footer a {
@@ -58,6 +59,8 @@
   grid-column: span 2;
   width: 100%;
   column-gap: 3rem;
+  margin-bottom: 4rem;
+  height: fit-content;
 }
 
 .s-footer__column {
