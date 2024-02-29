@@ -51,7 +51,7 @@
 }
 
 .c-footer__cta:hover {
-  background: #000;
+  background: black;
 }
 
 .c-footer__links {
@@ -128,13 +128,11 @@
 @media (max-width: 576px) {
   .c-footer {
     height: 100%;
-    /* background-color: red; */
   }
 
   .s-footer {
     display: grid;
     grid-template-columns: auto;
-    /* grid-template-rows: 30.2rem auto 20.2rem; */
     grid-template-rows: auto;
     padding: 4rem 0 0 0;
     max-width: 25rem;

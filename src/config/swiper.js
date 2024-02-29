@@ -1,4 +1,4 @@
-const swiper = new Swiper(".swiper", {
+export const swiperConfiguration = {
   loop: true,
   autoplay: {
     delay: 5000,
@@ -11,4 +11,6 @@ const swiper = new Swiper(".swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-});
+};
+
+export default swiperConfiguration;
