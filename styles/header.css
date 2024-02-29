@@ -206,3 +206,38 @@
   cursor: pointer;
   background-color: black;
 }
+
+#menu-hamburguer {
+  display: none;
+}
+
+/* @media (max-width: 1200px) {} */
+@media (max-width: 992px) {
+  .c-header__actions a {
+    display: none;
+  }
+
+  #search {
+    display: flex;
+  }
+
+  #cart {
+    display: flex;
+  }
+}
+
+/* @media (max-width: 768px) {} */
+@media (max-width: 576px) {
+  .c-header__nav {
+    display: none;
+  }
+
+  #menu-hamburguer {
+    display: flex;
+  }
+
+  .s-header__container {
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+}
