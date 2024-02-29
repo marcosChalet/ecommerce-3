@@ -10,6 +10,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script type="module" src="src/app.js" defer></script>
   </head>
   <body class="s-page-container">
     <header class="c-header">
@@ -20,13 +22,16 @@
             <li class="c-header__nav-item">
               <a class="c-header__nav-link" href="#home">Home</a>
             </li>
-            <li class="c-header__nav-item">
-              <select name="shop" id="shop" class="c-header__nav-select">
-                <option disabled selected value>Shop</option>
-                <option value="shop2">Shop 1</option>
-                <option value="shop3">Shop 2</option>
-                <option value="shop4">Shop 3</option>
-              </select>
+            <li id="dropdown" class="c-header__nav-item">
+              <!-- <div> -->
+                <a class="c-header__nav-link">shop</a>
+                <img class="c-header__dropdown-img" src="assets/images/arrow-down.svg">
+              <!-- </div> -->
+              <ul class="c-header__nav-select c-dropdown-select--js">
+                <li><p>Shop 1</p></li>
+                <li><p>Shop 2</p></li>
+                <li><p>Shop 3</p></li>
+              </ul>
             </li>
             <li class="c-header__nav-item">
               <a class="c-header__nav-link" href="#about">About</a>
@@ -43,7 +48,7 @@
           </ul>
         </nav>
 
-        <div class="c-header__actions">
+        <nav class="c-header__actions">
           <a
             id="login"
             class="c-header__action-link c-header__link-login c-header__link-login--js"
@@ -75,7 +80,26 @@
               alt="Ícoen de um coração"
             />
           </a>
-        </div>
+          <a
+            id="menu-hamburguer"
+            class="c-header__action-link c-menu-hamburguer c-header__hamburguer--js"
+          >
+            <img
+              src="assets/images/menu-hamburguer.svg"
+              alt="Ícone de menu"
+            >
+          </a>
+        </nav>
+      </div>
+      <div class="c-mobile-menu c-mobile-menu--js">
+        <nav>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
       </div>
 
       <!-- Carousel -->
@@ -122,43 +146,21 @@
     </header>
     <main>
       <section class="s-shop-cards">
-        <div class="c-card-item__list u-container-size">
-          <article class="c-card-item">
-            <div class="c-card-item__description">
-              <h6 class="c-description__text">Your Space</h6>
-              <h3 class="c-description__title">Unique Life</h2>
-              <h6 class="c-description__subtitle">Explore Items</h6>
-            </div>
-            <img
-              class="c-card-item__image"
-              src="assets/images/image1.png"
-              alt="Pote de caramelo para torradas"
-            />
-          </article>
-          <article class="c-card-item">
-            <div class="c-card-item__description">
-              <h6 class="c-description__text">Your Space</h6>
-              <h3 class="c-description__title">Unique Life</h2>
-              <h6 class="c-description__subtitle">Explore Items</h6>
-            </div>
-            <img
-              class="c-card-item__image"
-              src="assets/images/image2.png"
-              alt="Pote de caramelo para torradas"
-            />
-          </article>
-          <article class="c-card-item">
-            <div class="c-card-item__description">
-              <h6 class="c-description__text">Your Space</h6>
-              <h3 class="c-description__title">Unique Life</h2>
-              <h6 class="c-description__subtitle">Explore Items</h6>
-            </div>
-            <img
-              class="c-card-item__image"
-              src="assets/images/image3.png"
-              alt="Pote de caramelo para torradas"
-            />
-          </article>
+        <div class="c-card-item__list u-container-size c-sections--js">
+          <template id="card-1">
+            <article class="c-card-item">
+              <div class="c-card-item__description">
+                <h6 class="c-description__text c-card-1__text--js">{{text}}</h6>
+                <h3 class="c-description__title c-card-1__title--js">{{title}}</h2>
+                <h6 class="c-description__subtitle c-card-1__subtitle--js">{{subtitle}}</h6>
+              </div>
+              <img
+                class="c-card-item__image c-card-1__image--js"
+                src={{src}}
+                alt={{alt}}
+              />
+            </article>
+          </template>
         </div>
       </section>
 
@@ -188,97 +190,26 @@
             </nav>
           </header>
           <hr>
-          <div class="c-product-tab">
-            <article class="c-product-tab__card">
-              <img
-                class="c-product-tab__card__img"
-                src="assets/images/image1-2.png"
-                alt="Pote de caramelo para torradas"
-              />
-              <div class="c-product-tab__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-product-tab__card__text">English Department</p>
-                <div class="c-product-tab__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-product-tab__card__price">$6.48</h5>
+
+          <!-- list of products -->
+          <div class="c-product-tab c-products-tab--js">
+            <template id="card-2">
+              <article class="c-product-tab__card">
+                <img
+                  class="c-product-tab__card__img c-card-2__image--js"
+                  src={{src}}
+                  alt={{alt}}
+                />
+                <div class="c-product-tab__card__description">
+                  <h5 class="c-card-2__title--js">{{title}}</h5>
+                  <p class="c-product-tab__card__text c-card-2__text--js">{{text}}</p>
+                  <div class="c-product-tab__card__prices">
+                    <h5 class="c-card-2__price-from--js">{{price from}}</h5>
+                    <h5 class="c-product-tab__card__price c-card-2__price-to--js">{{price to}}</h5>
+                  </div>
                 </div>
-              </div>
-            </article>
-            <article class="c-product-tab__card">
-              <img
-                class="c-product-tab__card__img"
-                src="assets/images/image2-2.png"
-                alt="Pote de caramelo para torradas"
-              />
-              <div class="c-product-tab__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-product-tab__card__text">English Department</p>
-                <div class="c-product-tab__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-product-tab__card__price">$6.48</h5>
-                </div>
-              </div>
-            </article>
-            <article class="c-product-tab__card">
-              <img
-                class="c-product-tab__card__img"
-                src="assets/images/image3-2.png"
-                alt="Pote de caramelo para torradas"
-              />
-              <div class="c-product-tab__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-product-tab__card__text">English Department</p>
-                <div class="c-product-tab__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-product-tab__card__price">$6.48</h5>
-                </div>
-              </div>
-            </article>
-            <article class="c-product-tab__card">
-              <img
-                class="c-product-tab__card__img"
-                src="assets/images/image1-2.png"
-                alt="Pote de caramelo para torradas"
-              />
-              <div class="c-product-tab__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-product-tab__card__text">English Department</p>
-                <div class="c-product-tab__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-product-tab__card__price">$6.48</h5>
-                </div>
-              </div>
-            </article>
-            <article class="c-product-tab__card">
-              <img
-                class="c-product-tab__card__img"
-                src="assets/images/image2-2.png"
-                alt="Pote de caramelo para torradas"
-              />
-              <div class="c-product-tab__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-product-tab__card__text">English Department</p>
-                <div class="c-product-tab__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-product-tab__card__price">$6.48</h5>
-                </div>
-              </div>
-            </article>
-            <article class="c-product-tab__card">
-              <img
-                class="c-product-tab__card__img"
-                src="assets/images/image3-2.png"
-                alt="Pote de caramelo para torradas"
-              />
-              <div class="c-product-tab__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-product-tab__card__text">English Department</p>
-                <div class="c-product-tab__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-product-tab__card__price">$6.48</h5>
-                </div>
-              </div>
-            </article>
+              </article>
+            </template>
           </div>
         </div>
       </section>
@@ -358,97 +289,9 @@
             </nav>
           </header>
           <hr>
-          <div class="c-product-tab">
-            <article class="c-product-tab__card">
-              <img
-                class="c-product-tab__card__img"
-                src="assets/images/image1-2.png"
-                alt="Pote de caramelo para torradas"
-              />
-              <div class="c-product-tab__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-product-tab__card__text">English Department</p>
-                <div class="c-product-tab__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-product-tab__card__price">$6.48</h5>
-                </div>
-              </div>
-            </article>
-            <article class="c-product-tab__card">
-              <img
-                class="c-product-tab__card__img"
-                src="assets/images/image2-2.png"
-                alt="Pote de caramelo para torradas"
-              />
-              <div class="c-product-tab__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-product-tab__card__text">English Department</p>
-                <div class="c-product-tab__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-product-tab__card__price">$6.48</h5>
-                </div>
-              </div>
-            </article>
-            <article class="c-product-tab__card">
-              <img
-                class="c-product-tab__card__img"
-                src="assets/images/image3-2.png"
-                alt="Pote de caramelo para torradas"
-              />
-              <div class="c-product-tab__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-product-tab__card__text">English Department</p>
-                <div class="c-product-tab__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-product-tab__card__price">$6.48</h5>
-                </div>
-              </div>
-            </article>
-            <article class="c-product-tab__card">
-              <img
-                class="c-product-tab__card__img"
-                src="assets/images/image1-2.png"
-                alt="Pote de caramelo para torradas"
-              />
-              <div class="c-product-tab__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-product-tab__card__text">English Department</p>
-                <div class="c-product-tab__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-product-tab__card__price">$6.48</h5>
-                </div>
-              </div>
-            </article>
-            <article class="c-product-tab__card">
-              <img
-                class="c-product-tab__card__img"
-                src="assets/images/image2-2.png"
-                alt="Pote de caramelo para torradas"
-              />
-              <div class="c-product-tab__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-product-tab__card__text">English Department</p>
-                <div class="c-product-tab__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-product-tab__card__price">$6.48</h5>
-                </div>
-              </div>
-            </article>
-            <article class="c-product-tab__card">
-              <img
-                class="c-product-tab__card__img"
-                src="assets/images/image3-2.png"
-                alt="Pote de caramelo para torradas"
-              />
-              <div class="c-product-tab__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-product-tab__card__text">English Department</p>
-                <div class="c-product-tab__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-product-tab__card__price">$6.48</h5>
-                </div>
-              </div>
-            </article>
+
+          <!-- list of products -->
+          <div class="c-product-tab c-products2-tab--js">
           </div>
         </div>
       </section>
@@ -483,74 +326,25 @@
         <h3 class="c-bestsellers__title">BESTSELLER PRODUCTS</h3>
         <hr>
         <ul class="c-bestsellers__list">
-          <li class="c-bestsellers__item">
-            <article class="c-bestsellers__card">
-              <img
-                class="c-bestsellers__card__img"
-                src="assets/images/image1-3.png"
-                alt="Vasilhame azul em formato de jarra"
-              />
-              <div class="c-bestsellers__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-bestsellers__card__text">English Department</p>
-                <div class="c-bestsellers__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-bestsellers__card__price">$6.48</h5>
+          <template id="card-3">
+            <li class="c-bestsellers__item">
+              <article class="c-bestsellers__card">
+                <img
+                  class="c-bestsellers__card__img c-card-3__image--js"
+                  src={{src}}
+                  alt={{alt}}
+                />
+                <div class="c-bestsellers__card__description">
+                  <h5 class="c-card-3__title--js">{{title}}</h5>
+                  <p class="c-bestsellers__card__text c-card-3__text--js">{{text}}</p>
+                  <div class="c-bestsellers__card__prices">
+                    <h5 class="c-card-3__price-from--js">{{price from}}</h5>
+                    <h5 class="c-bestsellers__card__price c-card-3__price-to--js">{{price to}}</h5>
+                  </div>
                 </div>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="c-bestsellers__card">
-              <img
-                class="c-bestsellers__card__img"
-                src="assets/images/image2-3.png"
-                alt="Fatias de queijo"
-              />
-              <div class="c-bestsellers__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-bestsellers__card__text">English Department</p>
-                <div class="c-bestsellers__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-bestsellers__card__price">$6.48</h5>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="c-bestsellers__card">
-              <img
-                class="c-bestsellers__card__img"
-                src="assets/images/image3-3.png"
-                alt="Garrafa branca de cloro"
-              />
-              <div class="c-bestsellers__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-bestsellers__card__text">English Department</p>
-                <div class="c-bestsellers__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-bestsellers__card__price">$6.48</h5>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="c-bestsellers__card">
-              <img
-                class="c-bestsellers__card__img"
-                src="assets/images/image4-3.png"
-                alt="Embalagem amarela com balas de caramelo"
-              />
-              <div class="c-bestsellers__card__description">
-                <h5>Graphic Design</h5>
-                <p class="c-bestsellers__card__text">English Department</p>
-                <div class="c-bestsellers__card__prices">
-                  <h5>$16.48</h5>
-                  <h5 class="c-bestsellers__card__price">$6.48</h5>
-                </div>
-              </div>
-            </article>
-          </li>
+              </article>
+            </li>
+          </template>
         </ul>
       </section>
 
@@ -588,7 +382,7 @@
         </div>
         <ul class="c-posts__list">
           <li>
-            <figure class="c-post">
+            <aside class="c-post">
               <strong class="c-post--new">
                 <h6>NEW</h6>
               </strong>
@@ -625,10 +419,10 @@
                 </div>
                 <a class="c-post__link">Learn More <img src="assets/images/arrow-right-thin.svg" alt="Arrow icon."></a>
               </div>
-            </figure>
+            </aside>
           </li>
           <li>
-            <figure class="c-post">
+            <aside class="c-post">
               <strong class="c-post--new">
                 <h6>NEW</h6>
               </strong>
@@ -665,10 +459,10 @@
                 </div>
                 <a class="c-post__link">Learn More <img src="assets/images/arrow-right-thin.svg" alt="Arrow icon."></a>
               </div>
-            </figure>
+            </aside>
           </li>
           <li>
-            <figure class="c-post">
+            <aside class="c-post">
               <strong class="c-post--new">
                 <h6>NEW</h6>
               </strong>
@@ -705,7 +499,7 @@
                 </div>
                 <a class="c-post__link">Learn More <img src="assets/images/arrow-right-thin.svg" alt="Arrow icon."></a>
               </div>
-            </figure>
+            </aside>
           </li>
         </ul>
       </section>
@@ -791,7 +585,4 @@
       </div>
     </footer>
   </body>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./src/page.js"></script>
 </html>

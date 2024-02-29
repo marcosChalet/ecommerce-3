@@ -10,3 +10,14 @@
   width: 100%;
   height: 100%;
 }
+
+@media (max-width: 576px) {
+  .c-clients {
+    margin-top: 10rem;
+  }
+
+  .c-clients__list {
+    flex-direction: column;
+    gap: 6rem;
+  }
+}

@@ -126,3 +126,14 @@
 .c-post__link > img {
   margin-left: 1.5rem;
 }
+
+@media (max-width: 576px) {
+  .c-posts {
+    padding: 8rem 0;
+  }
+
+  .c-posts__list {
+    flex-direction: column;
+    gap: 8rem;
+  }
+}

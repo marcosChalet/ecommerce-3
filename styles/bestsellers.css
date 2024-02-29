@@ -56,3 +56,16 @@
 .c-bestsellers__card__price {
   color: var(--secondary-color-1);
 }
+
+@media (max-width: 576px) {
+  .c-bestsellers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+  }
+  .c-bestsellers__list {
+    flex-direction: column;
+  }
+}

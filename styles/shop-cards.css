@@ -1,12 +1,16 @@
 .s-shop-cards {
   background-color: var(--light-gray);
+  max-width: 100vw;
+  width: 100%;
+  overflow-x: auto;
 }
 
 .c-card-item__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  height: 39.2rem;
+  min-height: 39.2rem;
+  max-width: 108.4rem;
 }
 
 .c-card-item {
@@ -54,4 +58,13 @@
 
 .c-card-item__image {
   mix-blend-mode: multiply;
+}
+
+@media (max-width: 768px) {
+  .c-card-item__list {
+    flex-direction: column;
+    margin: 8rem 0;
+    max-width: 100%;
+    gap: 1rem;
+  }
 }
