@@ -1,13 +1,14 @@
 .c-header {
   position: relative;
   width: 100%;
-  max-width: 100vw;
+  max-width: 2400px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   user-select: none;
+  margin: auto;
 }
 
 .s-header__container {
